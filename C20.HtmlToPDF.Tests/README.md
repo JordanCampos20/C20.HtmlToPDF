@@ -1,4 +1,4 @@
-# C20.HtmlToPDF
+# C20.HtmlToPDF.Tests
 PT-BR:
 funciona normalmente no Windows x86 e x64,
 não foi implementado para os outros sistemas.

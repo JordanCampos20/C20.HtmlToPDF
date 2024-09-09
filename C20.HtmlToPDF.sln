@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C20.HtmlToPDF", "C20.HtmlToPDF\C20.HtmlToPDF.csproj", "{7D60D5CF-EAD9-4694-B9BD-35CC1488EE80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C20.HtmlToPDF.Tests", "C20.HtmlToPDF.Tests\C20.HtmlToPDF.Tests.csproj", "{05A46056-3F5E-45F0-8A0D-9C36BCFE8984}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D60D5CF-EAD9-4694-B9BD-35CC1488EE80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D60D5CF-EAD9-4694-B9BD-35CC1488EE80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D60D5CF-EAD9-4694-B9BD-35CC1488EE80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D60D5CF-EAD9-4694-B9BD-35CC1488EE80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05A46056-3F5E-45F0-8A0D-9C36BCFE8984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A46056-3F5E-45F0-8A0D-9C36BCFE8984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A46056-3F5E-45F0-8A0D-9C36BCFE8984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A46056-3F5E-45F0-8A0D-9C36BCFE8984}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

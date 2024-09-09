@@ -1,14 +1,4 @@
-# C20.HtmlToPDF
-PT-BR:
-funciona normalmente no Windows x86 e x64,
-não foi implementado para os outros sistemas.
-
-EN:
-works normally on Windows x86 and x64,
-it has not been implemented for other systems.
-
-# Example
-using C20.HtmlToPDF;
+﻿using C20.HtmlToPDF;
 
 var fileBase64String = "";
 

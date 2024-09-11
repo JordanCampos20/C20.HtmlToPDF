@@ -8,6 +8,7 @@ works normally on Windows x86 and x64,
 it has not been implemented for other systems.
 
 # Example
+```cs
 using C20.HtmlToPDF;
 
 var fileBase64String = "";
@@ -39,3 +40,4 @@ const string url = "https://www.google.com.br";
 fileBase64String = ConvertToPdf.ConverterPage(url, new ConvertToPdfOptions(orientation: PrintOrientationOptions.Portrait));
 
 File.WriteAllBytes($@"{pathDocuments}\example_page.pdf", Convert.FromBase64String(fileBase64String));
+```

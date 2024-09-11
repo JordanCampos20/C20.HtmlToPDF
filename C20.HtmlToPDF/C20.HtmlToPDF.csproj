@@ -14,41 +14,46 @@
         <Copyright>Direitos autorais (c) Jordan C. 2024</Copyright>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<VersionPrefix>1.0.5</VersionPrefix>
+		<VersionPrefix>1.1.0</VersionPrefix>
     </PropertyGroup>
 
-    <ItemGroup>
-      <PackageReference Include="Selenium.Support" Version="4.23.0" />
-      <PackageReference Include="Selenium.WebDriver" Version="4.23.0" />
-    </ItemGroup>
-    
-    <ItemGroup>
-		<None Include="README.md" Pack="true" PackagePath="\"/>
-        <None Include="LICENSE" Pack="true" PackagePath="\"/>
+	<ItemGroup>
+		<Content Include="C20.HtmlToPDF.targets" Pack="true" PackagePath="\build" />
+		<Content Include="C20.HtmlToPDF.targets" Pack="true" PackagePath="\buildTransitive" />
+		<None Include="selenium\**\*.*" Pack="true" PackagePath="\selenium" />
+		<None Include="README.md" Pack="true" PackagePath="\" />
+		<None Include="LICENSE" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
-        <Content Include="Dependencies\**" Pack="true" PackagePath="Dependencies">
-            <PackageCopyToOutput>true</PackageCopyToOutput>
-        </Content>
-        
-        <None Update="Dependencies\chrome-win32\**" Condition="'$(Platform)' == 'AnyCPU'">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-        <None Update="Dependencies\chromedriver-win32\**" Condition="'$(Platform)' == 'AnyCPU'">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-        
-        <None Update="Dependencies\chrome-win32\**" Condition="'$(Platform)' == 'x86'">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-        <None Update="Dependencies\chromedriver-win32\**" Condition="'$(Platform)' == 'x86'">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
+	<ItemGroup>
+		<PackageReference Include="Selenium.Support" Version="4.23.0" />
+		<PackageReference Include="Selenium.WebDriver" Version="4.23.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="selenium\chrome-win32\**" Condition="'$(Platform)' == 'AnyCPU'">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 		
-		        <None Update="Dependencies\chrome-win32\**" Condition="'$(Platform)' == 'x64'">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-        <None Update="Dependencies\chromedriver-win32\**" Condition="'$(Platform)' == 'x64'">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </None>
-    </ItemGroup>
+		<None Update="selenium\chromedriver-win32\**" Condition="'$(Platform)' == 'AnyCPU'">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+
+		<None Update="selenium\chrome-win32\**" Condition="'$(Platform)' == 'x86'">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+
+		<None Update="selenium\chromedriver-win32\**" Condition="'$(Platform)' == 'x86'">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+
+		<None Update="selenium\chrome-win32\**" Condition="'$(Platform)' == 'x64'">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+
+		<None Update="selenium\chromedriver-win32\**" Condition="'$(Platform)' == 'x64'">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	
 </Project>

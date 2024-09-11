@@ -8,6 +8,9 @@ namespace C20.HtmlToPDF;
 
 public static class ConvertToPdf
 {
+    public static string? ChromeDriverDirectory { get; set; } = Config.ChromeDriverDirectory();
+    public static string? ChromeDirectory { get; set; } = Config.ChromeBinaryLocation();
+
     public static string ConverterHtml(string html, ConvertToPdfOptions convertToPdfOptions = null!)
     {
         return Converter(html, convertToPdfOptions, false);
@@ -22,12 +25,12 @@ public static class ConvertToPdf
     {
         ChromeOptions chromeOptions = new()
         {
-            BinaryLocation = Config.ChromeBinaryLocation()
+            BinaryLocation = ChromeDirectory
         };
 
         chromeOptions.AddArguments("headless", "no-sandbox");
-            
-        WebDriver webDriver = new ChromeDriver(Config.ChromeDriverDirectory(), chromeOptions);
+
+        WebDriver webDriver = new ChromeDriver(ChromeDriverDirectory, chromeOptions);
 
         var webDriverWait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(10));
 
